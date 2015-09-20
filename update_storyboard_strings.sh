@@ -5,11 +5,24 @@
 # 
 # Needed gawk:
 # brew install gawk
+# or
+# sudo port install gawk
 #
 # Needed realpath:
 # brew tap iveney/mocha
 # brew install realpath
+# or
+# sudo port install realpath
 #
+
+if [ ! `which gawk` ]; then
+    echo "gawk is not installed."
+    exit 1
+fi
+if [ ! `which realpath` ]; then
+    echo "realpath is not installed."
+    exit 1
+fi
 
 storyboardExt=".storyboard"
 stringsExt=".strings"
